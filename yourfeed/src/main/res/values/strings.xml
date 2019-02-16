@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Your Feed</string>
+    <string name="debug_settings_your_feed">Your Feed Settings</string>
+    <string name="title_activity_your_feed">Your Feed</string>
+</resources>
