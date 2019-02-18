@@ -1,5 +1,4 @@
-package com.candidcold.yourfeed
-
+package com.candidcold.home
 
 import javax.inject.Qualifier
 
@@ -7,4 +6,4 @@ import javax.inject.Qualifier
 @Target(AnnotationTarget.TYPE, AnnotationTarget.VALUE_PARAMETER, AnnotationTarget.FUNCTION)
 @Qualifier
 @Retention(AnnotationRetention.RUNTIME)
-annotation class YourFeedSettings
+annotation class HomeSettings

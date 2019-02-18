@@ -11,9 +11,14 @@ import com.candidcold.yourfeed.preferences.FeatureOnSetting
 import dagger.Module
 
 @Module
-class YourFeedSettingsModule {
+class YourFeedSettingsModule(private val application: Application) {
 
     // TODO: Only have this in the debug flavor/variant whatever
+
+    @Provides
+    fun provideApplication(): Application {
+        return application
+    }
 
     @Provides
     @IntoSet
@@ -23,7 +28,7 @@ class YourFeedSettingsModule {
     }
 
     @Provides
-//    @IntoSet // We hopefully only need the into set at the :app level, some glue needed
+    @YourFeedSettings
     fun provideYourFeedSettingsGroup(
         @YourFeedSettings items: Set<@JvmSuppressWildcards PreferenceItem>
     ): PreferenceGroup {
